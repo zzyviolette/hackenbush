@@ -1,0 +1,137 @@
+#configBorderPane{
+    -fx-pref-width: 800;
+    -fx-pref-height: 500;
+    -fx-max-width: 800;
+    -fx-max-height: 500;
+    -fx-alignment: center;
+}
+#configTopVBox{
+    -fx-alignment: center;
+}
+#configLeftTilePane{
+    -fx-padding: 20,10,20,0;
+    -fx-hgap: 10;
+    -fx-vgap: 8;
+}
+#configLeftTilePane Button{
+    -fx-pref-width:30;
+    -fx-cell-size: 50;
+    -fx-max-width: 80;
+}
+
+#BtnVertex{
+    -fx-background-image: url('../img/vertex.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%;
+}
+
+#BtnEdge{
+    -fx-background-image: url('../img/edge.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%;
+}
+
+#BtnSelect{
+    -fx-background-image: url('../img/select.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%;
+}
+
+#BtnTranslation{
+    -fx-background-image: url('../img/translation.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%;
+}
+
+#BtnRotation{
+    -fx-background-image: url('../img/rotation.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%;
+}
+
+#BtnScale{
+    -fx-background-image: url('../img/scale.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%;
+}
+
+#BtnErase{
+    -fx-background-image: url('../img/erase.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%;
+}
+
+
+#BtnDuplicated{
+    -fx-background-image: url('../img/duplicated.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%;
+}
+
+#configBottomHBox{
+    -fx-alignment: center;
+    -fx-spacing: 10;
+    -fx-padding: 15,15,15,15;
+}
+#configPane{
+    -fx-border-color: #00BFFF;
+}
+#configPane .vertex{
+
+    -fx-stroke: blue;
+    -fx-fill: white;
+}
+
+#configPane #select{
+    -fx-stroke: black;
+    -fx-stroke-dash-array: 10,10;
+    -fx-fill: white;
+}
+
+#AI{
+    -fx-background-image: url('../img/AI.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%;
+
+}
+#HUMAN{
+    -fx-background-image: url('../img/human.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%;
+}
+
+#AI1{
+    -fx-background-image: url('../img/AI1.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%;
+
+}
+#HUMAN1{
+    -fx-background-image: url('../img/human1.png');
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 100%;
+}
+
+#configG2 #floor{
+    -fx-stroke-width:7;
+}
+#configLeftVBox{
+    -fx-pref-width: 50;
+    -fx-border-color: #00BFFF;
+}
+#configG3{
+    -fx-padding: 120,0,0,0;
+}
+

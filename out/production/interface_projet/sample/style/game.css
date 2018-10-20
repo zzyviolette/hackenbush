@@ -1,0 +1,53 @@
+#gameBorderPane{
+    -fx-pref-width: 800;
+    -fx-pref-height: 500;
+    -fx-max-width: 800;
+    -fx-max-height: 500;
+    -fx-alignment: center;
+}
+#gameLabel{
+    -fx-alignment: center;
+}
+
+#gameZone{
+    -fx-border-color: red;
+}
+#gameBottomHBox{
+    -fx-alignment: center;
+    -fx-padding: 15,15,15,15;
+}
+
+#gameG1 Circle{
+    -fx-stroke: blue;
+    -fx-fill: white;
+}
+
+#gameLeftVBox{
+    -fx-pref-width: 50;
+    -fx-border-color: #00BFFF;
+}
+
+#time Label{
+    -fx-background-color: red;
+}
+#gameG2 #floor{
+    -fx-stroke-width:7;
+}
+#gameTopVBox{
+    -fx-alignment: center;
+}
+
+Text{
+    -fx-font: 20 Verdana;
+    -fx-stroke: green;
+}
+
+#time{
+    -fx-text-fill: blue;
+    -fx-font-size: 20;
+}
+#playerName{
+    -fx-text-fill: blue;
+    -fx-font-size: 20;
+}
+

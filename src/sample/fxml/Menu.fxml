@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="menuBorderPane" stylesheets="@../style/menu.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MenuController">
+    <top>
+        <Label BorderPane.alignment="CENTER">
+            <font>
+                <Font size="70" />
+            </font>
+        </Label>
+    </top>
+    <center>
+        <HBox fx:id="menuHBox">
+            <children>
+                <Button onAction="#configuration" text="Gen">
+                    <font>
+                        <Font size="20" />
+                    </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <tooltip>
+                  <Tooltip text="Mode Generic" />
+               </tooltip>
+                </Button>
+                <Button onAction="#configuration" text="Nim">
+                    <font>
+                        <Font size="20" />
+                    </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <tooltip>
+                  <Tooltip text="Mode Nim" />
+               </tooltip>
+                </Button>
+            </children>
+         <padding>
+            <Insets top="150.0" />
+         </padding>
+        </HBox>
+    </center>
+    <bottom>
+        <HBox prefHeight="200">
+        </HBox>
+    </bottom>
+    <!--content><fx:include fx:id="second" source="FXMLCheckBox.fxml"/></content-->
+</BorderPane>

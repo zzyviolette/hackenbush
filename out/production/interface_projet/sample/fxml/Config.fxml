@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Path?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<BorderPane fx:id="configBorderPane" stylesheets="@../style/config.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.ConfigController">
+    <top>
+        <VBox fx:id="configTopVBox">
+            <MenuBar fx:id="menuBar">
+                <Menu text="File">
+                    <MenuItem text="Quit" fx:id="Quit" onAction="#explore"></MenuItem>
+                    <MenuItem text="Open" fx:id="Open" onAction="#explore"></MenuItem>
+                    <MenuItem text="Save" fx:id="Save" onAction="#explore"></MenuItem>
+                    <MenuItem text="Continue" fx:id="Export" onAction="#explore"></MenuItem>
+                </Menu>
+                <Menu text="Edit">
+                </Menu>
+            </MenuBar>
+            <Label fx:id="configLabel" text="EDITION" BorderPane.alignment="CENTER">
+                <font>
+                    <Font size="50" />
+                </font>
+            </Label>
+        </VBox>
+    </top>
+
+    <left>
+        <VBox fx:id="configLeftVBox">
+            <TilePane  fx:id="configLeftTilePane">
+                <children>
+                    <Button fx:id="BtnVertex" focusTraversable="false" onAction="#makeChoice">
+                        <tooltip>
+                            <Tooltip text="Vertex" />
+                        </tooltip></Button>
+                    <Button fx:id="BtnEdge" focusTraversable="false"  onAction="#makeChoice">
+                        <tooltip>
+                            <Tooltip text="Edge" />
+                        </tooltip></Button>
+                    <Button fx:id="BtnErase" focusTraversable="false"  onAction="#makeChoice">
+                        <tooltip>
+                            <Tooltip text="Erase" />
+                        </tooltip></Button>
+                    <Button fx:id="BtnSelect" focusTraversable="false"  onAction="#makeChoice">
+                        <tooltip>
+                            <Tooltip text="Select" />
+                        </tooltip></Button>
+                    <Button fx:id="BtnTranslation" focusTraversable="false"  onAction="#makeChoice">
+                        <tooltip>
+                            <Tooltip text="Translation" />
+                        </tooltip></Button>
+                    <Button fx:id="BtnRotation" focusTraversable="false"  onAction="#makeChoice">
+                        <tooltip>
+                            <Tooltip text="Rotation" />
+                        </tooltip></Button>
+                    <Button fx:id="BtnScale" focusTraversable="false"  onAction="#makeChoice">
+                        <tooltip>
+                            <Tooltip text="Scale" />
+                        </tooltip></Button>
+                    <Button fx:id="BtnDuplicated" focusTraversable="false"  onAction="#makeChoice">
+                        <tooltip>
+                            <Tooltip text="Duplicated" />
+                        </tooltip></Button>
+                </children>
+            </TilePane>
+        </VBox>
+    </left>
+
+    <center >
+        <Pane fx:id="configPane">
+            <Group fx:id="configG1">
+            </Group>
+            <Group fx:id="configG2">
+                <Line fx:id="floor" endX="750" layoutY="350" layoutX="4"></Line>
+            </Group>
+            <Group fx:id="configG3" layoutY="120" layoutX="235">
+                <HBox fx:id="configG3HBox" spacing="30">
+                    <TextField fx:id="configTextfield1" promptText="Nbr_tiges" prefWidth="80" focusTraversable="false"/>
+                    <TextField fx:id="configTextfield2" promptText="Len_max" prefWidth="80" focusTraversable="false"/>
+                </HBox>
+            </Group>
+        </Pane>
+    </center>
+
+    <bottom>
+        <HBox fx:id="configBottomHBox">
+            <children>
+
+                <RadioButton fx:id="HUMAN" prefHeight="24.0" prefWidth="49.0"  focusTraversable="false" >
+                    <tooltip>
+                        <Tooltip text="Human" />
+                    </tooltip></RadioButton>
+                <RadioButton fx:id="AI" prefHeight="26.0" prefWidth="52.0"   focusTraversable="false" >
+                    <tooltip>
+                        <Tooltip text="AI" />
+                    </tooltip></RadioButton>
+
+                <RadioButton fx:id="HUMAN1" prefHeight="24.0" prefWidth="49.0"  focusTraversable="false" >
+                    <tooltip>
+                        <Tooltip text="Human" />
+                    </tooltip></RadioButton>
+
+                <RadioButton fx:id="AI1" prefHeight="26.0" prefWidth="52.0"   focusTraversable="false" >
+                    <tooltip>
+                        <Tooltip text="AI" />
+                    </tooltip></RadioButton>
+
+                <RadioButton fx:id="NORMAL" text="NORMAL" focusTraversable="false" >
+                <tooltip>
+                    <Tooltip text="NORMAL" />
+                </tooltip></RadioButton>
+
+                <RadioButton fx:id="MISERY" text="MISERY"  focusTraversable="false" >
+               <tooltip>
+                  <Tooltip text="MISERY" />
+               </tooltip></RadioButton>
+                <Button fx:id="start" onAction="#start" text="START" focusTraversable="false"  />
+                <fx:define>
+                    <ToggleGroup fx:id="toggleGroup1">
+                        <toggles>
+                            <fx:reference source="AI" /> <fx:reference source="HUMAN" selected="true"/>
+                        </toggles> </ToggleGroup>
+                </fx:define>
+                <fx:define>
+                    <ToggleGroup fx:id="toggleGroup2">
+                        <toggles>
+                            <fx:reference source="AI1" /> <fx:reference source="HUMAN1" selected="true"/>
+                        </toggles> </ToggleGroup>
+                </fx:define>
+                <fx:define>
+                    <ToggleGroup fx:id="toggleGroup3">
+                        <toggles>
+                            <fx:reference source="NORMAL" selected="true"/> <fx:reference source="MISERY"/>
+                        </toggles> </ToggleGroup>
+                </fx:define>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

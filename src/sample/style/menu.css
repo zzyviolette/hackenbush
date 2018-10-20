@@ -1,0 +1,24 @@
+#menuBorderPane{
+    -fx-pref-width: 800;
+    -fx-pref-height: 500;
+    -fx-max-width: 800;
+    -fx-max-height: 500;
+    -fx-alignment: center;
+    -fx-background-image:url('../img/backgroud.png');
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: no-repeat;
+
+}
+
+#menuHBox{
+    -fx-alignment: center;
+    -fx-spacing: 10;
+}
+#menuHBox Button{
+
+    -fx-background-color: #fec30c
+
+}
+#menuLabel{
+    -fx-alignment: center;
+}
